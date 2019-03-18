@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Daum 시작페이지 설정</title>
+<style type="text/css">
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes: none}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#222}
+a{color:#222;text-decoration:none}
+a:active, a:hover{text-decoration:underline}
+a:active{background-color:transparent}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+header,main,aside,article,footer{display:block}
+#daumIndex{overflow:hidden;position:absolute;left:-9999px;width:0;height:1px;margin:0;padding:0}
+.ir_wa{display:block;overflow:hidden;position:relative;z-index:-1;width:100%;height:100%}
+.screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+.show{display:block}
+.hide{display:none}
+.img_launch{display:inline-block;overflow:hidden;background:url(//t1.daumcdn.net/daumtop_deco/images/top/2017/img_launch_180312.png) no-repeat 0 0;}
+.img_thumb{display:block}
+#daumWrap{position:relative;letter-spacing:-1px}
+#daumHead{display:block;width:990px;margin:0 auto;padding-top:69px;border-bottom:1px solid #ececec}
+#daumContent{overflow:hidden;width:990px;margin:0 auto;padding:36px 0 75px}
+.os_mac #daumWrap{letter-spacing:0}
+#wrapMinidaum{position:absolute;left:50%;width:990px;margin-left:-495px}
+.d_head{overflow:hidden;padding:16px 0;border-bottom:2px solid #222}
+.d_head:after{display:block;visibility:hidden;height:0;content:'';font-size:0;clear:both}
+.d_head .tit_service{float:left;height:43px;margin-right:21px}
+#daumServiceLogo{display:block;overflow:hidden;width:152px;height:43px;font-size:24px;line-height:40px;background-color:transparent;background-position:0 0;letter-spacing:-1px}
+#daumRelServices{float:left;height:43px}
+#daumRelServices li{float:left}
+#daumRelServices .img_launch{display:block;overflow:hidden;height:43px;font-size:24px;line-height:40px;background-color:transparent;letter-spacing:-1px}
+#daumRelServices .link_services1{width:106px;background-position:-174px 0}
+#daumGnb{display:block;overflow:hidden;position:relative;height:58px}
+.d_gnb .link_gnb{display:block;overflow:hidden;height:34px;padding:12px 0;font-weight:bold;line-height:34px;background:url(//t1.daumcdn.net/daumtop_deco/images/top/2017/img_launch_180312.png) no-repeat 0 0;}
+.gnb_comm{float:left}
+.gnb_comm li{float:left;height:58px}
+.gnb_comm .link_gnb1{width:126px;background-position:0 -100px}
+.gnb_comm .link_gnb2{width:106px;background-position:-126px -100px}
+.gnb_comm .link_gnb3{width:80px;background-position:-232px -100px}
+.gnb_comm .link_gnb4{width:90px;background-position:-312px -100px}
+.gnb_comm .link_gnb5{width:120px;background-position:-402px -100px}
+.gnb_comm .link_gnb6{width:120px;background-position:-522px -100px}
+.gnb_comm .on .link_gnb1{background-position:0 -158px}
+.gnb_comm .on .link_gnb2{background-position:-126px -158px}
+.gnb_comm .on .link_gnb3{background-position:-232px -158px}
+.gnb_comm .on .link_gnb4{background-position:-312px -158px}
+.gnb_comm .on .link_gnb5{background-position:-402px -158px}
+.gnb_comm .on .link_gnb6{background-position:-522px -158px}
+.gnb_etc{position:absolute;top:0;right:0;width:auto;height:58px}
+.gnb_etc .link_cs{overflow:hidden;float:right;width:112px;background-position:-300px 0}
+#daumFoot{width:100%;padding-bottom:50px;border-top:1px solid #888;font-size:12px;line-height:18px;color:#82868b}
+#daumFoot .inner_foot{width:990px;margin:0 auto}
+#daumFoot .footer_link{padding:36px 0 5px}
+#daumFoot .link_info{color:#888}
+#daumFoot .txt_dot{padding:0 2px 0 1px}
+#daumFoot .info_copyright{display:block;font-size:11px}
+#daumFoot .info_copyright .link_kakao{color:#82868b}
+.os_mac #daumFoot .footer_link{padding:39px 0 4px}
+.os_mac #daumFoot .txt_dot{padding:0 3px}
+.os_mac #daumFoot .info_copyright{letter-spacing:1px}
+.txt_emph{color:#118eff}
+.desc_guide{font-weight:bold}
+.desc_guide .txt_marked{padding:0 3px 2px 2px;font-weight:bold;background-color:#dbeeff}
+.list_guide li{padding-top:31px}
+.list_guide .num_g{font-weight:bold}
+.list_guide .img_thumb{margin:17px 0 6px}
+.os_mac .desc_guide .txt_marked{padding:2px 2px 0 3px}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi),
+only screen and (min-resolution: 1.5dppx) {
+.img_launch,.d_gnb .link_gnb{background-image:url(//t1.daumcdn.net/daumtop_deco/images/top/2017/rtn/img_launch_180312.png);background-size:660px 220px}
+}
+</style>
+<script src="//i1.daumcdn.net/icon/w/static/top13/scripts/201406091414/html5shiv-3.7.0.min.js"></script>
+</head>
+<body>
+<div id="daumIndex">
+<a href="#daumBody">본문 바로가기</a>
+<a href="#daumGnb">메뉴 바로가기</a>
+</div>
+<div id="daumWrap" class="daum_launch">
+<div id="wrapMinidaum"></div>
+<header id="daumHead">
+<div class="d_head">
+<h1 class="tit_service"><span id="daumServiceLogo" class="img_launch"><span class="ir_wa">시작페이지 설정</span></span></h1>
+<strong class="screen_out">관련 서비스</strong>
+<ul id="daumRelServices">
+<li>
+<a href="https://www.daum.net/sitemap/index.html" class="img_launch link_services1"><span class="ir_wa">전체서비스</span></a>
+</li>
+</ul>
+</div>
+<nav id="daumGnb" class="d_gnb">
+<h2 class="screen_out">시작페이지 설정 안내메뉴</h2>
+<ul class="gnb_comm">
+<li class="on">
+<a href="#36608" class="link_gnb link_gnb1"><span class="screen_out">선택됨</span><span class="ir_wa">인터넷 익스플로러</span></a>
+</li>
+<li>
+<a href="#36613" class="link_gnb link_gnb2"></a>
+</li>
+<li>
+<a href="#36609" class="link_gnb link_gnb3"></a>
+</li>
+<li>
+<a href="#36610" class="link_gnb link_gnb4"></a>
+</li>
+<li>
+<a href="#36611" class="link_gnb link_gnb5"></a>
+</li>
+<li>
+<a href="#36612" class="link_gnb link_gnb6"></a>
+</li>
+</ul>
+<div class="gnb_etc">
+<a href="https://cs.daum.net" class="link_gnb link_cs"><span class="ir_wa">고객센터 바로가기</span></a>
+</div>
+</nav>
+</header>
+<hr class="hide">
+<main id="daumContent" class="cont_launch">
+<article id="mArticle">
+<h2 id="daumBody" class="screen_out">다음 시작페이지 설정 안내</h2>
+<div class="section_ie">
+<h3 class="screen_out">인터넷 익스플로러</h3>
+<p class="desc_guide">인터넷 익스플로러 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 인터넷 익스플로러를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 메뉴에서 <em class="txt_emph">‘도구&gt;인터넷옵션’</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/ie_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> &#91;일반&#93; 탭의 홈페이지 URL 입력란에 <em class="txt_emph">‘https://www.daum.net’</em>을 입력 후 <em class="txt_emph">확인 버튼</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/ie_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> <em class="txt_emph">인터넷 익스플로러를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+<div class="section_edge hide">
+<h3 class="screen_out">엣지 브라우저</h3>
+<p class="desc_guide">엣지 브라우저 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 엣지 브라우저를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 우측 상단의 <em class="txt_emph">&#91;아이콘&#93;</em> 클릭후 하단의 <em class="txt_emph">&#91;설정&#93;</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/edge_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> 다른 프로그램으로 열기 항목의 <em class="txt_emph">&#91;특정 페이지&gt;사용자 지정&#93;</em>으로 수정합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/edge_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> URL 입력 영역에 <em class="txt_emph">'https://www.daum.net'</em>을 입력합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/edge_guide3.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">5.</span> <em class="txt_emph">엣지 브라우저를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+<div class="section_chrome hide">
+<h3 class="screen_out">구글 크롬</h3>
+<p class="desc_guide">구글 크롬 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 크롬 브라우저를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 우측 상단의 <em class="txt_emph">&#91;아이콘&gt;설정&#93;</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/chrome_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> 설정 페이지에서 <em class="txt_emph">&#91;시작 그룹&gt;특정 페이지 또는 페이지 모음 열기&gt;새 페이지 추가&#93;</em>를 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/chrome_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> 팝업 창에서 <em class="txt_emph">'https://www.daum.net'</em>을 입력하고 <em class="txt_emph">추가 버튼</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/chrome_guide3.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">5.</span> <em class="txt_emph">크롬 브라우저를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+<div class="section_firefox hide">
+<h3 class="screen_out">파이어폭스</h3>
+<p class="desc_guide">파이어폭스 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 파이어폭스 브라우저를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 우측 상단의 <em class="txt_emph">&#91;아이콘&gt;설정&#93;</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/firefox_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> 설정 하단에 <em class="txt_emph">시작페이지 부분</em>을 아래와 같이 변경해주세요.<p class="screen_out">- &#91;일반&#93; 탭의 시작페이지&lt;홈페이지 URL 입력란에 ‘https://www.daum.net’을 입력합니다.</p><img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/firefox_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> <em class="txt_emph">파이어폭스 브라우저를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+<div class="section_safari hide">
+<h3 class="screen_out">사파리 브라우저</h3>
+<p class="desc_guide">사파리 브라우저 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 사파리 브라우저를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 좌측 상단의 <em class="txt_emph">&#91;Safari&gt;환경설정&#93;</em> 메뉴를 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/safari_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> &#91;홈페이지&#93; URL 입력란에 <em class="txt_emph">‘https://www.daum.net’</em>을 입력합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/safari_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> <em class="txt_emph">사파리 브라우저를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+<div class="section_opera hide">
+<h3 class="screen_out">오페라 브라우저</h3>
+<p class="desc_guide">오페라 브라우저 환경에서 <em class="txt_marked">다음을 시작페이지로 설정</em>하는 방법은 아래와 같습니다.</p>
+<ol class="list_guide">
+<li><span class="num_g">1.</span> 오페라 브라우저를 띄웁니다.</li>
+<li><span class="num_g">2.</span> 우측 상단의 아이콘 <em class="txt_emph">&#91;시작페이지 사용자 설정&#93;</em> 메뉴를 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/opera_guide1.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">3.</span> 우측 하단의 아이콘 <em class="txt_emph">&#91;브라우저 설정으로 이동&#93;</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/opera_guide2.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">4.</span> <em class="txt_emph">&#91;시작 시&gt;특정 페이지 또는 페이지 세트 열기-페이지 설정&#93;</em>을 클릭합니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/opera_guide3.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">5.</span> 팝업창에 새 페이지 추가 URL에 <em class="txt_emph">‘www.daum.net’</em>을 입력하고 <em class="txt_emph">확인 버튼</em>을 누릅니다.<img src="//t1.daumcdn.net/daumtop_deco/images/top/2017/opera_guide4.jpg" width="990" class="img_thumb" alt=""></li>
+<li><span class="num_g">6.</span> <em class="txt_emph">오페라 브라우저를 새로</em> 띄워보면, 다음으로 시작페이지가 변경된 것을 확인하실 수 있습니다.</li>
+</ol>
+</div>
+</article>
+</main>
+<hr class="hide">
+<footer id="daumFoot">
+<div class="inner_foot">
+<h2 class="screen_out">서비스 이용정보</h2>
+<div class="footer_link">
+<a href="https://www.kakaocorp.com" class="link_info">회사소개</a>
+<span class="txt_dot">&middot;</span>
+<a href="http://ad.kakaocorp.com" class="link_info">광고안내</a>
+<span class="txt_dot">&middot;</span>
+<a href="https://register.search.daum.net/index.daum" class="link_info">검색등록</a>
+<span class="txt_dot">&middot;</span>
+<a href="http://with.kakao.com" class="link_info">제휴문의</a>
+<span class="txt_dot">&middot;</span>
+<a href="https://careers.kakao.com/index" class="link_info">인재채용</a>
+<span class="txt_dot">&middot;</span>
+<a href="http://policy.daum.net/info/info" class="link_info">서비스약관</a>
+<span class="txt_dot">&middot;</span>
+<a href="http://policy.daum.net/youthpolicy/youthpolicy" class="link_info">청소년보호정책</a>
+<span class="txt_dot">&middot;</span>
+<a href="http://policy.daum.net/info_protection/info_protection" class="link_info">개인정보처리방침</a>
+<span class="txt_dot">&middot;</span>
+<a href="https://www.daum.net/doc/top_accessibility.html" class="link_info">웹접근성안내</a>
+<span class="txt_dot">&middot;</span>
+<a href="https://cs.daum.net" class="link_info">고객센터</a>
+</div>
+<small class="info_copyright">Copyright &copy; <a href="http://www.kakaocorp.com" target="_blank" class="link_kakao">Kakao Corp</a>. All rights reserved.</small>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var minidaum_options = {
+bgType: "white",
+enableLogoutRetun: false,
+returnUrl: '',
+disableHotissue: false,
+disableLogo: false,
+disableTracker: false,
+enableShield: false
+}
+//]]>
+</script>
+<script src="//go.daum.net/jsa_minidaum_pc.daum" charset="utf-8" type="text/javascript"></script>
+<script src="//s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+if (window.navigator.userAgent.indexOf("Mac") != -1) {
+jQuery('html').addClass("os_mac");
+}
+});
+</script>
+<script type="text/javascript">
+jQuery(function(){
+var span = "<span class=\"screen_out\">선택됨</span>";
+var BrowserEnum = {"36608":"ie", "36613":"edge", "36609":"chrome", "36610":"firefox", "36611":"safari", "36612":"opera"};
+jQuery('.link_gnb').on('click', function(e) {
+var a = jQuery(this);
+a.prepend(span);
+var parent = a.parent('li');
+parent.addClass('on');
+jQuery('.gnb_comm').find('li').each(function(){
+var temp = jQuery(this);
+if (temp.index() != parent.index()) {
+temp.removeClass('on');
+$("span", this).remove();
+}
+});
+var id = jQuery(this).attr('href').replace('#', '');
+var section = jQuery(".section_"+BrowserEnum[id].valueOf());
+section.removeClass('hide');
+jQuery('#mArticle').find('div').each(function(){
+var temp = jQuery(this);
+if (temp.index() != section.index()) {
+temp.addClass('hide');
+}
+});
+});
+var href = window.location.href;
+if (href.indexOf('#') > -1) {
+var anchorId = href.substring(href.indexOf('#'));
+jQuery('.link_gnb').each(function() {
+var temp = jQuery(this);
+if (temp.attr('href') == anchorId) {
+temp.trigger('click');
+return false;
+}
+});
+}
+jQuery(window).on('hashchange', function () {
+window.location.reload();
+});
+});
+</script>
+</body>
+</html>

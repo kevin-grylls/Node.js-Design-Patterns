@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Daum 첫화면 웹 접근성 안내</title>
+<meta name="Description" content="Daum 첫화면의 웹 접근성 개선을 위한 이야기">
+<meta name="keywords" content="daum, main page,accessibility,웹 접근성,시각장애인,스크린리더,화면낭독기">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style type="text/css">
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-family:'돋움',dotum,sans-serif;color:#333}
+a{color:#333;text-decoration:none}
+a:active,a:hover{text-decoration:underline}
+a:active{background-color:transparent}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:400}
+h2:focus,h3:focus {outline:0}
+.ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999em}
+.ir_wa{display:block;overflow:hidden;position:relative;width:100%;height:100%;z-index:-1}
+.screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+.f_l{float:left}
+.f_r{float:right}
+.cl_b{clear:both;width:0;height:0;font-size:0;line-height:0}
+.show{display:block}
+.hide{display:none}
+.tbl{border-collapse:collapse;border-spacing:0}
+.kbd{padding:2px 5px;border-width:1px;border-style:solid;border-radius:3px;font-family:'돋움',dotum,sans-serif}
+.toc_link{float:right;margin-top:-1em;font-size:.8em}
+.accessibility{background-image:url(//mail1.daumcdn.net/mail_static/mint/img/svc/accessibility/bg_top_170124.gif);background-position:0 top;background-repeat:repeat-x}
+.accessibility_type1{position:relative;width:978px;margin:0 auto;font-size:1em;font-family:'돋움',dotum,sans-serif;color:#333}
+.accessibility_type2{position:relative;width:978px;margin:0 auto;font-size:1.2em;font-family:'돋움',dotum,sans-serif;color:#333}
+.accessibility_type3{position:relative;width:978px;margin:0 auto;font-weight:700;font-size:1.4em;font-family:'돋움',dotum,sans-serif;color:#333}
+.accessibility_type1 .box_style .ft_type1{text-decoration:underline;color:#fff}
+.accessibility_type2 .box_style .ft_type2{text-decoration:underline;color:#fff}
+.accessibility_type3 .box_style .ft_type3{text-decoration:underline;color:#fff}
+.accessibility_type1 .sub_tit, .accessibility_type2 .sub_tit{font-weight:400}
+.gray_type{background-color:#fff}
+.gray_type a{color:#0000bf}
+.gray_type .kbd{border-color:#ddd;background-color:#f7f7f7}
+.gray_type .cont_accessibility #mFeature{border:1px solid #919191;border-bottom:0 none;background-color:#f7f7f7}
+.gray_type .cont_accessibility #mFeature .list_main a{color:#000}
+.gray_type .cont_accessibility #mFeature .list_main li.depth1{border-bottom:1px solid #919191}
+.gray_type .cont_accessibility .list_main .list_sub li{margin-left:8px;border-top:1px solid #a2a6a9}
+.gray_type .wrap_cont .tit_txt{border-bottom:1px solid #919191;color:#000}
+.gray_type .cont_accessibility .wrap_cont{color:#000}
+.gray_type .wrap_cont .write_info{border:1px solid #ddd;background-color:#f7f7f7}
+.gray_type .box_style .ft_type4{background-color:#d0d0d0;text-decoration:underline}
+.gray_type .wrap_cont .btn{border:1px solid #3465bc;background-color:#3d77dd;color:#fff}
+.gray_type .wrap_cont #msg{color:red}
+.white_type{background-color:#fff}
+.white_type a{color:#0000bf}
+.white_type .cont_accessibility #mFeature{border:1px solid #515151;border-bottom:0 none;background-color:#fff}
+.white_type .cont_accessibility #mFeature .list_main a{color:#0000bf}
+.white_type .cont_accessibility #mFeature .list_main li.depth1{border-bottom:1px solid #515151}
+.white_type .cont_accessibility .list_main .list_sub li{margin-left:8px;border-top:1px solid #515151}
+.white_type .wrap_cont .tit_txt{border-bottom:1px solid #515151;color:#333}
+.white_type .cont_accessibility .wrap_cont{color:#333}
+.white_type .wrap_cont .write_info{background-color:#fff;border:1px solid #515151}
+.white_type .box_style .ft_type5{background-color:#fff;text-decoration:underline}
+.white_type .wrap_cont .btn{border:1px solid #555;background-color:#000;color:#fff}
+.white_type .wrap_cont #msg{color:#000}
+.blue_type{background-color:#000}
+.blue_type a{color:#0f0}
+.blue_type .cont_accessibility #mFeature{border:1px solid #fff;border-bottom:0 none;background-color:#222}
+.blue_type .cont_accessibility #mFeature .list_main a{color:#0f0}
+.blue_type .cont_accessibility #mFeature .list_main li.depth1{border-bottom:1px solid #fff}
+.blue_type .cont_accessibility .list_main .list_sub li{margin-left:8px;border-top:1px solid #999}
+.blue_type .wrap_cont .tit_txt{border-bottom:1px solid #fff;color:#fff}
+.blue_type .cont_accessibility .wrap_cont{color:#fff}
+.blue_type .wrap_cont .write_info{border:1px solid #d0d0d0}
+.blue_type .box_style .ft_type6{background-color:#000002;text-decoration:underline}
+.blue_type .wrap_cont .btn{border:1px solid #555;background-color:#0f0;color:#000}
+.blue_type .wrap_cont #msg{color:#ff0}
+.black_type{background-color:#000}
+.black_type a{color:#0ff}
+.black_type .cont_accessibility #mFeature{border:1px solid #fff;border-bottom:0 none;background-color:#222}
+.black_type .cont_accessibility #mFeature .list_main a{color:#0ff}
+.black_type .cont_accessibility #mFeature .list_main li.depth1{border-bottom:1px solid #fff}
+.black_type .cont_accessibility .list_main .list_sub li{margin-left:8px;border-top:1px solid #999}
+.black_type .wrap_cont .tit_txt{border-bottom:1px solid #fff;color:#ff0}
+.black_type .cont_accessibility .wrap_cont{color:#ff0}
+.black_type .wrap_cont .write_info{border:1px solid #d0d0d0}
+.black_type .box_style .ft_type7{background-color:#000002;text-decoration:underline}
+.black_type .wrap_cont .btn{border:1px solid #555;background-color:#0ff;color:#000}
+.black_type .wrap_cont #msg{color:#fff}
+.d_direct{position:relative;width:100%;z-index:1000}
+.d_direct .link_direct{position:absolute;top:-30px;left:0;padding:5px 10px;line-height:14px;background-color:#3d4351;color:#eee;text-align:center}
+.d_direct .link_direct:active,.d_direct .link_direct:focus{overflow:hidden;top:0;text-decoration:none}
+
+#daumHead{overflow:hidden;width:100%;margin-bottom:14px;padding-bottom:19px}
+#daumHead .logo{float:left;padding-top:13px}
+#daumLogo{display:block;float:left;width:42px;height:28px;margin-right:6px}
+#daumHead h1{float:left;margin-left:2px;font-weight:700;font-size:21px;line-height:1.2em;font-family:'맑은 고딕','Malgun Gothic','굴림',Gulim,sans-serif;color:#fff;letter-spacing:-1px}
+#daumHead .box_style{position:absolute;margin-top:18px;right:0}
+#daumHead .box_style .tit{float:left;margin-top:4px;padding-right:8px;font-size:16px;line-height:1em;color:#fff}
+#daumHead .box_style button{float:left;font-weight:700;line-height:1;text-align:center}
+.box_style .ft_comm{margin-right:3px;padding:4px 7px;border:0;border-radius:5px;font-size:16px;vertical-align:middle}
+.box_style .ft_type1{margin-right:7px;font-size:12px;width:24px;height:24px;color:#b6d7fe;border: 1px solid #b6d7fe;border-radius:5px;}
+.box_style .ft_type2{margin-right:7px;font-size:14px;width:24px;height:24px;color:#b6d7fe;border: 1px solid #b6d7fe;border-radius:5px;}
+.box_style .ft_type3{margin-right:10px;font-size:18px;width:24px;height:24px;color:#b6d7fe;border: 1px solid #b6d7fe;border-radius:5px;}
+.box_style .ft_type4{margin-left:1px;background-color:#d0d0d0;color:#000}
+.box_style .ft_type5{background-color:#fff;color:#000}
+.box_style .ft_type6{background-color:#000002;color:#fff}
+.box_style .ft_type7{margin-right:0;background-color:#000002;color:#ff0}
+.cont_accessibility{overflow:hidden;width:978px}
+.cont_accessibility #mFeature{float:left;width:260px;border:1px solid #a2a6a9;border-bottom:0 none;border-radius:5px;background-color:#eee}
+.cont_accessibility #mFeature .list_main{overflow:hidden}
+.cont_accessibility #mFeature .list_main ul{list-style:none}
+.cont_accessibility #mFeature .list_main li{padding-left:6px;line-height:1.3em;list-style:none}
+.cont_accessibility #mFeature .list_main li.depth1{padding:18px 0 10px 7px;border-bottom:1px solid #a2a6a9}
+.cont_accessibility .list_main .tit{display:block;margin:0 9px 8px;font-weight:700;line-height:1.125em;color:#000}
+.cont_accessibility .list_main .list_sub{width:238px;margin-left:4px}
+.cont_accessibility .list_main .list_sub li{padding:9px 0 7px;border-top:1px solid #ddd;font-size:.9em;line-height:1.05em;letter-spacing:-1px}
+.cont_accessibility .wrap_cont{float:right;width:697px}
+.cont_accessibility .wrap_cont #msg{font-weight:700;line-height:2em}
+.cont_accessibility .wrap_cont .btn{margin-left:8px;border-radius:3px;padding:.2em .5em;font-weight:700;font-size:.9em;line-height:1.2em}
+.wrap_cont .tit_txt{overflow:hidden;width:100%;padding-bottom:8px;margin-bottom:9px;border-bottom:1px solid #a3a7aa;font-size:1.2em;line-height:1.35em}
+.wrap_cont .tit_txt em{float:left;margin-left:7px;font-weight:700}
+.wrap_cont .txt_desc{margin-left:9px;padding-bottom:18px;font-size:.95em;line-height:1.7em;letter-spacing:-1px;text-align:justify}
+.wrap_cont .txt_desc em{padding-bottom:10px;font-weight:700}
+.wrap_cont .txt_desc .lst{padding-bottom:0}
+.wrap_cont .lst{padding-bottom:14px}
+.wrap_cont .box_cont{width:677px;margin:8px 0 29px;padding:11px 10px 7px 5px}
+.wrap_cont .box_cont ol{margin-left:28px;padding:0;list-style-type:decimal}
+.wrap_cont .box_cont ul{margin-left:36px;padding:0;list-style-type:disc}
+.wrap_cont .box_cont li{margin-bottom:5px}
+.wrap_cont .box_cont xmp{margin:0 0 5px;font-family:'돋움',dotum,sans-serif}
+.wrap_cont .box_cont .tit{margin-left:9px;padding-bottom:10px;font-size:1em;font-weight:700;line-height:1em;letter-spacing:0}
+.wrap_cont .box_cont .sub_tit{margin-left:14px;padding:14px 0 10px;font-size:0.95em;line-height:1em;letter-spacing:0}
+.wrap_cont .box_cont .lst{padding-bottom:0}
+.wrap_cont .nobox{padding-bottom:25px}
+.wrap_cont .write_info{overflow:hidden;margin:0 30px 30px;padding:10px;font-size:.9em;line-height:1.7em}
+.wrap_cont .write_info .tit_info{float:left;width:220px;margin-left:20px;padding-right:20px;clear:both}
+.wrap_cont .write_info .kbd{border:0}
+.tit_cont{position:relative}
+.tit_cont .permalink{position:absolute;bottom:10px;right:10px;font-size:12px}
+#daumFoot{margin-top:100px;font-size:.7em;font-family:tahoma,sans-serif;text-align:center;color:#919191;clear:both}
+</style>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+
+(function(l,f){function m(){var a=e.elements;return"string"==typeof a?a.split(" "):a}function i(a){var b=n[a[o]];b||(b={},h++,a[o]=h,n[h]=b);return b}function p(a,b,c){b||(b=f);if(g)return b.createElement(a);c||(c=i(b));b=c.cache[a]?c.cache[a].cloneNode():r.test(a)?(c.cache[a]=c.createElem(a)).cloneNode():c.createElem(a);return b.canHaveChildren&&!s.test(a)?c.frag.appendChild(b):b}function t(a,b){if(!b.cache)b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag();
+a.createElement=function(c){return!e.shivMethods?b.createElem(c):p(c,a,b)};a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+m().join().replace(/[\w\-]+/g,function(a){b.createElem(a);b.frag.createElement(a);return'c("'+a+'")'})+");return n}")(e,b.frag)}function q(a){a||(a=f);var b=i(a);if(e.shivCSS&&!j&&!b.hasCSS){var c,d=a;c=d.createElement("p");d=d.getElementsByTagName("head")[0]||d.documentElement;c.innerHTML="x<style>article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}</style>";
+c=d.insertBefore(c.lastChild,d.firstChild);b.hasCSS=!!c}g||t(a,b);return a}var k=l.html5||{},s=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,r=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,j,o="_html5shiv",h=0,n={},g;(function(){try{var a=f.createElement("a");a.innerHTML="<xyz></xyz>";j="hidden"in a;var b;if(!(b=1==a.childNodes.length)){f.createElement("a");var c=f.createDocumentFragment();b="undefined"==typeof c.cloneNode||
+"undefined"==typeof c.createDocumentFragment||"undefined"==typeof c.createElement}g=b}catch(d){g=j=!0}})();var e={elements:k.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",version:"3.7.0",shivCSS:!1!==k.shivCSS,supportsUnknownElements:g,shivMethods:!1!==k.shivMethods,type:"default",shivDocument:q,createElement:p,createDocumentFragment:function(a,b){a||(a=f);
+if(g)return a.createDocumentFragment();for(var b=b||i(a),c=b.frag.cloneNode(),d=0,e=m(),h=e.length;d<h;d++)c.createElement(e[d]);return c}};l.html5=e;q(f)})(this,document);
+</script>
+<![endif]-->
+</head>
+<body class="accessibility gray_type">
+<div id="daumIndex" class="d_direct">
+<!--웹접근성용 바로가기 링크 모음-->
+<a href="#daumBody" class="link_direct">본문 바로가기</a>
+<a href="#toc" class="link_direct">목차 바로가기</a>
+</div>
+<div id="daumWrap" class="accessibility_type1">
+<header id="daumHead">
+<div class="logo">
+<a href="//www.daum.net" id="daumLogo"><img src="//mail1.daumcdn.net/mail_static/mint/img/svc/accessibility/daumlogo_170124.gif" width="42" height="17" id="daum" class="img_init" alt="Daum" style="margin-top:8px">
+</a>
+<h1>첫화면 웹 접근성 안내</h1>
+</div>
+<h2 class="screen_out">텍스트 스타일</h2>
+<div id="boxStyle" class="box_style">
+<!-- 20170214 aria적용 시작 -->
+<strong class="screen_out">텍스트 크기</strong>
+<button class="ft_type1 fs_btn" title="보통" data-size="1"><span aria-hidden="true">가</span><span class="screen_out">보통</span></button>
+<button class="ft_type2 fs_btn" title="크게" data-size="2"><span aria-hidden="true">가</span><span class="screen_out">크게</span></button>
+<button class="ft_type3 fs_btn" title="아주크게" data-size="3"><span aria-hidden="true">가</span><span class="screen_out">아주크게</span></button>
+<span class="screen_out">색상 모드</span>
+<button class="ft_comm ft_type4 fc_btn" title="기본" data-color="gray"><span aria-hidden="true">C</span><span class="screen_out">기본</span></button>
+<button class="ft_comm ft_type5 fc_btn" title="고대비 검정&amp;흰색" data-color="white"><span aria-hidden="true">C</span><span class="screen_out">고대비 검정&amp;흰색</span></button>
+<button class="ft_comm ft_type6 fc_btn" title="고대비 흰색&amp;검정" data-color="blue"><span aria-hidden="true">C</span><span class="screen_out">고대비 흰색&amp;검정</span></button>
+<button class="ft_comm ft_type7 fc_btn" title="고대비 노랑&amp;검정" data-color="black"><span aria-hidden="true">C</span><span class="screen_out">고대비 노랑&amp;검정</span></button>
+<!-- 20170214 aria적용 끝 -->
+</div>
+</header>
+<hr class="hide">
+<main id="daumContent" class="cont_accessibility">
+<div id="mFeature">
+<h2 id="toc" class="screen_out" tabindex="-1">목차</h2>
+<nav aria-labelledby="toc">
+<ul class="list_main">
+<li class="depth1">
+<a href="#info" class="tit">1. 소개</a>
+</li>
+<li class="depth1">
+<a href="#ad" class="tit">2. 자동실행 광고 설정</a>
+</li>
+<li class="depth1">
+<a href="#hints" class="tit">3. 자동 갱신에 대한 유의사항</a>
+<ul class="list_sub">
+<li><a href="#hints1">3.1 페이지 전체 자동갱신</a></li>
+<li><a href="#hints2">3.2 페이지탭의 자동전환과 정지기능</a></li>
+</ul>
+</li>
+<li class="depth1">
+<a href="#blind_manual" class="tit">4. 시각장애인 사용자 안내</a>
+<ul class="list_sub">
+<li><a href="#blind_manual1">4.1 바로가기 링크 이용하기</a></li>
+<li><a href="#blind_manual2">4.2 헤딩 구조 살펴보기</a></li>
+<li><a href="#blind_manual3">4.3 탭 메뉴의 사용</a></li>
+<li><a href="#blind_manual4">4.4 탭 메뉴의 상세페이지 이동 기능</a></li>
+<li><a href="#blind_manual5">4.5 콘텐츠 구조의 이해</a></li>
+<li><a href="#blind_manual6">4.6 중복되는 콘텐츠의 배제</a></li>
+<li><a href="#blind_manual7">4.7 Windows 고대비 테마 지원</a></li>
+<li><a href="#blind_manual8">4.8 메일 서비스 이용하기</a></li>
+</ul>
+</li>
+<li class="depth1 lst">
+<a href="#inquiry" class="tit">5. 문의하기</a>
+</li>
+</ul>
+</nav>
+</div>
+<article id="mArticle" class="wrap_cont">
+<h2 id="daumBody" class="screen_out" tabindex="-1">Daum 첫화면 웹 접근성 안내 본문</h2>
+<div class="tit_cont">
+<h2 id="info" class="tit_txt" tabindex="-1"><em>1. 소개</em></h2>
+<a href="#info" aria-label="1. 소개 &dash; 퍼머링크" title="1. 소개 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<div class="box_cont">
+<p class="txt_desc">
+&nbsp;Daum은 1997년 한메일을 시초로 서비스를 시작한 대한민국 최고의 포털 사이트입니다.<br>&nbsp;Daum은 서비스의 입구라 할 수 있는 첫 화면을 "모두가 함께 하는 웹서비스"로 만들기 위해 웹 표준을 준수하고, 접근성을 높이기 위해 꾸준히 최선의 노력을 기울이고 있습니다.<br>&nbsp;장애가 있더라도 원활하게 서비스를 이용할 수 있도록 Daum 첫 화면 사용 안내와 변경사항을 안내해 드립니다.<br>
+</p>
+</div>
+<div class="tit_cont">
+<h2 id="ad" class="tit_txt" tabindex="-1"><em>2. 자동실행 광고 설정</em></h2>
+<a href="#ad" aria-label="2. 자동실행 광고 설정 &dash; 퍼머링크" title="2. 자동실행 광고 설정 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<div class="box_cont">
+<p class="txt_desc">
+&nbsp;Daum 첫 화면에는 종종 일부 화면을 덮는 동영상 광고가 자동 재생됩니다.<br>&nbsp;이러한 사운드를 포함한 자동실행 광고를 제공받지 않기를 원하시면 '제공받지 않음'에 체크 후 '확인' 버튼을 눌러주세요.
+</p>
+<div class="write_info">
+<form action="#" id="form">
+<fieldset>
+<legend class="screen_out">자동실행 광고 설정 폼</legend>
+<input type="radio" name="no_expand_ad" value="0" id="on">
+<label for="on">제공받음</label>
+<input type="radio" name="no_expand_ad" value="1" id="off">
+<label for="off">제공받지 않음</label>
+<button type="submit" id="saveBtn" class="btn">확인</button>
+<div id="msg" aria-live="polite"></div>
+</fieldset>
+</form>
+</div>
+<p class="txt_desc">
+&nbsp;해당 기능은 브라우저별로 제공되며, '제공받지 않음' 설정은 1년 동안 유효 합니다. 만약 쿠키를 삭제할 경우, 해당 기능도 삭제되오니 재설정해주시기 바랍니다.
+</p>
+</div>
+<div class="tit_cont">
+<h2 id="hints" class="tit_txt" tabindex="-1"><em>3. 자동 갱신에 대한 유의사항</em></h2>
+<a href="#hints" aria-label="3. 자동 갱신에 대한 유의사항 &dash; 퍼머링크" title="3. 자동 갱신에 대한 유의사항 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="hints1" class="tit" tabindex="-1">3.1 페이지 전체 자동갱신</h3>
+<a href="#hints1" aria-label="3.1 페이지 전체 자동갱신 &dash; 퍼머링크" title="3.1 페이지 전체 자동갱신 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;Daum 첫 화면은 미디어, 유익한 정보, 블로그, 쇼핑 등의 다양한 정보를 담고 있고, 이 정보를 최신 상태로 유지하고 있습니다.<br>&nbsp;새로운 정보를 업데이트하기 위해 매 10분마다 자동으로 페이지를 새로고침 하고 있습니다. 실시간으로 변하는 새로운 정보를 반영하기 위한 것이니 이용하실 때 참고 부탁드립니다.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="hints2" class="tit" tabindex="-1">3.2 페이지탭의 자동전환과 정지기능</h3>
+<a href="#hints2" aria-label="3.2 페이지탭의 자동전환과 정지기능 &dash; 퍼머링크" title="3.2 페이지탭의 자동전환과 정지기능 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;Daum 첫 화면에는 많은 콘텐츠를 담고 있어서 페이지 탭 구조가 많이 사용되었습니다. 페이지 탭은 서로 겹쳐져 있어서 다른 탭을 가리고 있으므로 한 번에 하나의 탭만 화면에 표시됩니다.<br>&nbsp;Daum의 다양한 정보를 사용자에게 보여드리기 위해 주기적으로 페이지 탭이 전환되면서 새로운 정보를 표시하고 있는데 일부 장애인 사용자들은 자동전환이 불편할 수 있습니다. 이를 보완하기 위해 탭 영역에 마우스 포인터를 올려놓거나 키보드 초점이 진입하면 탭 자동전환 기능이 멈추도록 적용되어 있습니다.
+</p>
+</div>
+<div class="tit_cont">
+<h2 id="blind_manual" class="tit_txt" tabindex="-1"><em>4. 시각장애인 사용자 안내</em></h2>
+<a href="#blind_manual" aria-label="4. 시각장애인 사용자 안내 &dash; 퍼머링크" title="4. 시각장애인 사용자 안내 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<span class="screen_out">최종업데이트. 17년 7월 4일</span>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual1" class="tit" tabindex="-1">4.1 바로가기 링크 이용하기</h3>
+<a href="#blind_manual1" aria-label="4.1 바로가기 링크 이용하기 &dash; 퍼머링크" title="4.1 바로가기 링크 이용하기 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;Daum 첫 화면에는 사용자가 주요 콘텐츠 영역으로 빠르게 이동할 수 있도록 바로가기 링크를 제공하고 있습니다. 키보드와 화면낭독 프로그램 사용자는 이 링크를 이용해서 페이지를 빠르게 탐색할 수 있습니다.<br><br>&nbsp;화면낭독 프로그램으로 건너뛰기 링크를 이용할 때는 <kbd class="kbd">Ctrl + Home</kbd> 키를 눌러 페이지의 첫 부분으로 이동한 후 아래 방향키를 눌러 이동하고자 하는 링크에서 <kbd class="kbd">Enter</kbd> 키를 누르면 매우 편리합니다.<br>&nbsp;다만 Daum 첫 화면 접속 후 <kbd class="kbd">Tab</kbd> 키를 이용한 초점 이동과 화면낭독 프로그램의 <kbd class="kbd" aria-hidden="true">&uarr; / &darr;</kbd><span class="screen_out">위 / 아래</span> 방향키를 이용한 초점 이동 순서가 다릅니다. 이것은 화면낭독 프로그램 뿐 아니라 키보드 사용자도 주요 기능을 편리하게 접근하도록 배려하기 위한 것임을 참고해주세요.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual2" class="tit" tabindex="-1">4.2 헤딩 구조 살펴보기</h3>
+<a href="#blind_manual2" aria-label="4.2 헤딩 구조 살펴보기 &dash; 퍼머링크" title="4.2 헤딩 구조 살펴보기 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;Daum 첫 화면의 다양한 콘텐츠는 헤딩을 이용해서 구조화되었습니다. 헤딩 1의 'Daum'을 시작으로 가장 큰 분류인 각 섹션을 헤딩 2로 구분하고, 그 하위 카테고리 탭은 헤딩 3과 헤딩 4로 구분되어 있습니다.<br><br>예를 들면 아래와 같습니다.
+</p>
+<div class="write_info" aria-hidden="true">
+<ul>
+<li>Daum 헤딩1 그래픽링크
+<ul>
+<li>검색 헤딩2</li>
+<li>주요서비스 헤딩2</li>
+<li>오늘의 정보 헤딩2</li>
+<li>로그인 정보 헤딩2</li>
+<li>미디어 헤딩2
+<ul>
+<li>선택됨 뉴스 헤딩3 링크
+<ul>
+<li>일반뉴스 헤딩4</li>
+</ul>
+</li>
+<li>연예 헤딩3 링크</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="screen_out">
+<ul>
+<li>Daum 헤딩1 그래픽링크</li>
+<li>검색 헤딩2</li>
+<li>주요서비스 헤딩2</li>
+<li>오늘의 정보 헤딩2</li>
+<li><li>로그인 정보 헤딩2</li>
+<li>미디어 헤딩2</li>
+<li>선택됨 뉴스 헤딩3 링크</li>
+<li>일반뉴스 헤딩4</li>
+<li>연예 헤딩3 링크</li>
+</ul>
+</div>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual3" class="tit" tabindex="-1">4.3 탭 메뉴의 사용</h3>
+<a href="#blind_manual3" aria-label="4.3 탭 메뉴의 사용 &dash; 퍼머링크" title="4.3 탭 메뉴의 사용 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<h4 class="sub_tit">4.3.1 탭 메뉴의 기본 사용방법</h4>
+<p class="txt_desc">
+&nbsp;헤딩 2는 큰 섹션의 제목을 나타내고, 그 하위에는 여러 개의 페이지 탭을 가지는데 여기에는 헤딩 3을 사용하고 있습니다. 헤딩 3으로 구성된 탭은 하위에 여러 링크 목록을 콘텐츠로 가지는 제목입니다. 모든 헤딩 3 탭의 링크 목록이 항상 표시되는 것은 아니며, 현재 활성화된 탭의 링크 목록만 바로 접근할 수 있습니다. <br><br> 미디어 섹션을 예로 들어보면 다음과 같습니다.
+</p>
+<div class="write_info" aria-hidden="true">
+<ul>
+<li>미디어 헤딩2
+<ul>
+<li>선택됨 뉴스 헤딩3 링크
+<ul>
+<li>일반뉴스 헤딩4
+<ul>
+<li>링크목록</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>연예 헤딩3 링크</li>
+<li>스포츠 헤딩3 링크</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="screen_out">
+<ul>
+<li>미디어 헤딩2</li>
+<li>선택됨 뉴스 헤딩3 링크</li>
+<li>일반뉴스 헤딩4</li>
+<li>링크목록</li>
+<li>연예 헤딩3 링크</li>
+<li>스포츠 헤딩3 링크</li>
+</ul>
+</div>
+<p class="txt_desc">
+&nbsp;헤딩 3의 탭 제목 중 다른 탭의 링크 목록을 확인하려면 "OOO 헤딩 3 링크"에서 <kbd class="kbd">Enter</kbd> 키를 누른 후 아래 방향키나 <kbd class="kbd">Tab</kbd> 키를 눌러서 글 링크 목록을 탐색하면 됩니다. 위 목록을 예로 들면 "스포츠 헤딩 3 링크"에서 <kbd class="kbd">Enter</kbd> 키를 누르면 다음과 같이 콘텐츠가 로딩됩니다. "OOO 헤딩 3 링크"의 앞에 "선택됨"은 해당 콘텐츠가 활성되었다는 정보입니다.
+</p>
+<div class="write_info" aria-hidden="true">
+<ul>
+<li>미디어 헤딩2
+<ul>
+<li>뉴스 헤딩3 링크</li>
+<li>연예 헤딩3 링크</li>
+<li>선택됨 스포츠 헤딩3 링크
+<ul>
+<li>주요 경기 헤딩4
+<ul>
+<li>링크 목록</li>
+</ul>
+</li>
+<li>스포츠 일반뉴스 헤딩4
+<ul>
+<li>링크 목록</li>
+</ul>
+</li>
+<li>(중략)</li>
+</ul>
+</li>
+<li>영화 헤딩3 링크</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="screen_out">
+<ul>
+<li>미디어 헤딩2</li>
+<li>뉴스 헤딩3 링크</li>
+<li>연예 헤딩3 링크</li>
+<li>선택됨 스포츠 헤딩3 링크</li>
+<li>주요 경기 헤딩4</li>
+<li>링크 목록</li>
+<li>스포츠 일반뉴스 헤딩4</li>
+<li>링크 목록</li>
+<li>(중략)</li>
+<li>영화 헤딩3 링크</li>
+</ul>
+</div>
+<p class="txt_desc">
+&nbsp;이와 같이 스포츠 탭이 활성화되면 스포츠 헤딩 3 링크와 영화 헤딩 3 링크 사이에 헤딩 4인 제목과 링크 목록들이 추가된 것을 확인할 수 있습니다.
+</p>
+<h4 class="sub_tit">4.3.2 미디어 뉴스탭의 페이지 전환</h4>
+<p class="txt_desc">
+&nbsp;미디어 헤딩 2의 뉴스 헤딩 3은 다른 카테고리와 달리 3개의 페이지로 구성되어 있습니다.
+</p>
+<div class="write_info" aria-hidden="true">
+<ul>
+<li>미디어 헤딩2</li>
+<li>선택됨 뉴스 헤딩3 링크
+<ul>
+<li>선택됨 뉴스 1 탭</li>
+<li>뉴스목록</li>
+</ul>
+</li>
+<li>연예 헤딩3 링크</li>
+</ul>
+</div>
+<div class="screen_out">
+<ul>
+<li>미디어 헤딩2</li>
+<li>선택됨 뉴스 헤딩3 링크</li>
+<li>선택됨 뉴스1 탭</li>
+<li>뉴스목록</li>
+<li>연예 헤딩3 링크</li>
+</ul>
+</div>
+<p class="txt_desc">
+&nbsp;뉴스의 하위 3개의 탭 중 현재 활성화되어있는 탭은 뉴스 헤딩 3 링크 다음에 나오는 "선택됨 뉴스 1 탭"으로 제공되어 쉽게 확인할 수 있습니다.
+페이지 탭을 전환할 때는 미디어 섹션의 끝 부분에 있는 탭 전환 기능을 사용해야 합니다. 탭 전환 기능에는 "현재 탭 2 / 전체 탭 9"와 같이 현재 섹션의 페이지 탭 구성을 안내하고 "이전 탭 버튼" "다음 탭 버튼"을 함께 제공하여 콘텐츠를 전환할 수 있습니다.<br>&nbsp;뉴스의 페이지 탭 전환을 위해 뉴스 목록에서 센스리더의 입력 서식 이동 기능키 <kbd class="kbd">N</kbd>을 누르면 "이전 탭 버튼" 한 번 더 누르면 "다음 탭"버튼으로 접근됩니다. 이 곳에서 <kbd class="kbd">Enter</kbd> 키를 누르면 현재 활성화되어있는 탭의 다음 탭이 활성화됩니다.<br>&nbsp;탭 전환 후 뉴스 목록에 빠르게 접근하려면, 먼저 헤딩 단위 이동키 <kbd class="kbd">Shift + 2</kbd>를 사용하여 미디어 섹션의 처음으로 이동한 후 <kbd class="kbd" aria-hidden="true">&darr;</kbd><span class="screen_out">아래</span> 방향키나 <kbd class="kbd">Tab</kbd>키를 눌러서 뉴스 헤딩 3 하위의 뉴스 2 탭의 목록을 확인할 수 있습니다.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual4" class="tit" tabindex="-1">4.4 탭 메뉴의 상세페이지 이동 기능</h3>
+<a href="#blind_manual4" aria-label="4.4 탭 메뉴의 상세페이지 이동 기능 &dash; 퍼머링크" title="4.4 탭 메뉴의 상세페이지 이동 기능 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;헤딩 3 또는 헤딩 4로 구성된 링크는 기본적으로 페이지 탭 구성을 가지고 있어, 이미 설명드린 바와 같이 <kbd class="kbd">Enter</kbd> 키를 눌러 탭 콘텐츠를 활성화한 후 하위 목록을 탐색할 수 있습니다.<br><br>&nbsp;탭을 활성화시키는 헤딩 3 링크에는 한 가지 기능이 더 있습니다. 활성화된 탭의 제목 링크에서 <kbd class="kbd">Enter</kbd> 키를 누르게 되면 해당 서비스의 상세 페이지로 이동하게 됩니다.<br><br>&nbsp;예를 들어 미디어 섹션의 연예 탭 콘텐츠가 활성화되어 "선택됨 연애 헤딩 3 링크"가 되었을 때, 이 링크에서 <kbd class="kbd">Enter</kbd> 키를 누르면 다음뉴스 서비스의 연예기사 목록 페이지로 이동하게 됩니다. Daum 첫 화면의 기사 목록 외에 더 많은 기사를 확인하고 싶을 때 이 기능을 사용할 수 있습니다.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual5" class="tit" tabindex="-1">4.5 콘텐츠 구조의 이해 &dash; 최신 기술의 적용</h3>
+<a href="#blind_manual5" aria-label="4.5 콘텐츠 구조의 이해 &dash; 퍼머링크" title="4.5 콘텐츠 구조의 이해 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;화면낭독 프로그램 사용자가 웹을 탐색할 때 겪는 어려움 중 콘텐츠의 구조를 이해하고 탐색하기 어려운 점이 있습니다. 이를 보완하기 위해 Daum의 많은 서비스에서 WAI-ARIA 및 HTML 5 Section Content Model을 활용하여 화면낭독 프로그램 사용자가 콘텐츠의 구조를 이해하기 쉽도록 구성하였습니다.<br><br>&nbsp;Daum 첫 화면에서 WAI-ARIA를 제공한 부분 중 Landmark 역할을 사용하여 영역의 의미를 명확히 하여 구조를 이해하기 쉽게 했고, aria-selected로 선택된 항목을 구분하였으며, aria-expanded를 사용하여 하위 콘텐츠의 펼침 / 접힘 상태를 안내하고 있습니다.<br>&nbsp;화면낭독 프로그램 사용자가 Landmark 영역으로 빠르게 이동하기 위한 기능키는 다음과 같습니다.
+</p>
+<dl class="write_info">
+<dt class="tit_info">센스리더 5.9</dt>
+<dd><kbd class="kbd">J</kbd></dd>
+<dt class="tit_info">NVDA (2017.1)</dt>
+<dd><kbd class="kbd">D</kbd></dd>
+<dt class="tit_info">JAWS for Windows 15</dt>
+<dd><kbd class="kbd">R</kbd></dd>
+</dl>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual6" class="tit" tabindex="-1">4.6 중복되는 콘텐츠의 배제</h3>
+<a href="#blind_manual6" aria-label="4.6 중복되는 콘텐츠의 배제 &dash; 퍼머링크" title="4.6 중복되는 콘텐츠의 배제 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;글로 이동하는 링크 목록에서 동일한 내용의 이미지 링크와 텍스트 링크가 중복으로 나타나는 경우가 많이 있었습니다. 이 경우 불필요한 키조작과 중복 정보 제공으로 인해 화면낭독 프로그램 사용자의 사용성이 떨어지는 문제가 있기 때문에 이런 부분을 방지하기 위한 작업을 진행했습니다.<br>
+&nbsp;중복되는 이미지의 대체 텍스트 처리 및 WAI-ARIA 속성 활용 등을 통해 사용성을 높이기 위해 노력했습니다.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual7" class="tit" tabindex="-1">4.7 Windows 고대비 테마 지원</h3>
+<a href="#blind_manual7" aria-label="4.7 Windows 고대비 테마 지원 &dash; 퍼머링크" title="4.7 Windows 고대비 테마 지원 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;Windows 시스템의 시각 효과로 제공중인 고대비 테마를 사용하는 경우, Internet Explorer 웹 브라우저에서 일부 이미지 콘텐츠가 화면에 표시되지 않아 일부 사용자들은 정보를 인식할 수 없는 이슈가 발생합니다. Daum 첫 화면의 이미지 콘텐츠에 대체 정보를 제공하여 고대비 테마를 사용하더라도 모든 사용자가 콘텐츠를 인식할 수 있도록 노력하고 있습니다.
+</p>
+</div>
+<div class="box_cont">
+<div class="tit_cont">
+<h3 id="blind_manual8" class="tit" tabindex="-1">4.8 메일 서비스 이용하기</h3>
+<a href="#blind_manual8" aria-label="4.8 메일 서비스 이용하기 &dash; 퍼머링크" title="4.8 메일 서비스 이용하기 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<p class="txt_desc">
+&nbsp;1997년에 대한민국 최초로 무료 웹 메일 서비스를 시작한 Daum 메일은 모든 사용자가 자유롭게 이용할 수 있도록 노력하고 있습니다. Daum 메일을 화면낭독 프로그램으로 사용하는 방법에 대해 "메일 웹 접근성 안내" 페이지를 통해 안내해드리고 있습니다.<br>
+<a href="//mail.daum.net/static/accessibility.html" target="_blank">메일 웹 접근성 안내 바로가기</a>
+</p>
+</div>
+<div class="tit_cont">
+<h2 id="inquiry" class="tit_txt" tabindex="-1"><em>5. 문의하기</em></h2>
+<a href="#inquiry" aria-label="5. 문의하기 &dash; 퍼머링크" title="5. 문의하기 &dash; 퍼머링크" property="url" class="permalink"><span aria-hidden="true">&sect;</span></a>
+</div>
+<div class="box_cont">
+<p class="txt_desc lst">
+&nbsp;Daum에서는 웹 접근성 향상을 위해 여러분의 제안이나 의견을 환영합니다.<br> 언제든 Daum내 서비스에 관한 의견을 보내주시기 바랍니다.<br>
+<a href="//cs.daum.net/question/110.html" target="_blank">고객센터 바로가기</a>
+</p>
+</div>
+</article>
+</main>
+<hr class="hide">
+
+<footer id="daumFoot">
+<span>Copyright ⓒ Kakao Corp. All rights reserved.</span>
+</footer>
+<script type="text/javascript" src="//s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var getCookie=function(a){ckName=a+'=',cookie=document.cookie,start=cookie.indexOf(ckName);var b;if(start!=-1){start+=ckName.length;b=cookie.indexOf(';',start);if(b==-1){b=cookie.length}return cookie.substring(start,b)}return null},setCookie=function(a,b,c,d,e){var s=[],date=new Date();date.setTime(date.getTime()+c);s[s.length]=a+'='+escape(b);s[s.length]=c?'; expires='+date.toGMTString():'';s[s.length]=d?'; path='+d:'';s[s.length]='; domain='+(e?e:window.location.hostname);document.cookie=s.join('')};
+jQuery.noConflict();jQuery(document).ready(function($){var b='NOEXPANDAD',cValue='1';if(getCookie(b)==cValue){$('#off').attr('checked','checked').focus();$('#on').removeAttr('checked')}else{$('#on').attr('checked','checked').focus();$('#off').removeAttr('checked')}$('#saveBtn').bind('click',function(){var a=$('input[name=no_expand_ad]:radio:checked').val(),cExpires;if(a==1){cExpires=1000*60*60*24*365;cValue='1';$('#msg').text('자동실행 광고를 제공받지않음으로 저장되었습니다.')}else{cExpires=-1;cValue='0';$('#msg').text('자동실행 광고를 제공받음으로 저장되었습니다.')}setCookie(b,cValue,cExpires,'/','.daum.net');return false});$('.fs_btn').bind('click',function(){var a='accessibility_type'+this.getAttribute('data-size');$('#daumWrap').attr('class',a)});$('.fc_btn').bind('click',function(){var a=this.getAttribute('data-color');document.body.className="accessibility "+a+"_type"})});
+//]]>
+</script>
+</div>
+</body>
+</html>
